@@ -25,7 +25,11 @@
 			},
 			success:function(res){
 				console.log(res);
-				
+				if(res.status==1){
+					location.href="/login";
+				}else{
+					alert(res.message);
+				}
 			}
 		})
 	}

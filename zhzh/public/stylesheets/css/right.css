@@ -1,0 +1,139 @@
+* {
+  margin: 0px;
+  padding: 0px; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+.right {
+  float: left;
+  background: #ededed;
+  overflow-y: auto;
+  width: 100%; }
+  .right .rightList {
+    width: 96%;
+    margin: auto;
+    height: 568px; }
+    .right .rightList .header {
+      height: 50px;
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+      line-height: 50px;
+      position: relative; }
+      .right .rightList .header span {
+        color: #333;
+        font-size: 18px;
+        margin-left: 10px; }
+        .right .rightList .header span a {
+          cursor: pointer; }
+        .right .rightList .header span a:hover {
+          color: #fbcf36;
+          text-decoration: underline; }
+      .right .rightList .header img {
+        vertical-align: middle;
+        margin-left: 10px;
+        cursor: pointer; }
+      .right .rightList .header input {
+        height: 26px;
+        width: 98px;
+        color: #fff;
+        font-size: 13px;
+        border-radius: 5px;
+        border: none;
+        background: #c43926;
+        position: absolute;
+        right: 10px;
+        top: 16px; }
+      .right .rightList .header input:hover {
+        background: #e84d38;
+        cursor: pointer; }
+    .right .rightList .aside {
+      height: 40px;
+      width: 100%;
+      border: 1px solid #ccc;
+      background: #f3f3f3;
+      line-height: 40px;
+      margin-top: 10px; }
+      .right .rightList .aside .iconfont {
+        font-size: 20px;
+        color: #a2a2a2;
+        margin-left: 10px; }
+      .right .rightList .aside select {
+        height: 18px;
+        margin-right: 5px; }
+      .right .rightList .aside .select1 {
+        width: 158px; }
+      .right .rightList .aside .select2 {
+        width: 105px; }
+      .right .rightList .aside .select3 {
+        width: 70px; }
+      .right .rightList .aside .select4 {
+        width: 70px; }
+      .right .rightList .aside span {
+        font-size: 12px;
+        color: #808080; }
+      .right .rightList .aside .iptTxt {
+        width: 100px;
+        height: 20px; }
+      .right .rightList .aside .iptBtn {
+        width: 53px;
+        height: 26px;
+        background: #ff3f3f;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer; }
+    .right .rightList .list {
+      width: 100%;
+      background: #fff;
+      margin-top: 20px; }
+      .right .rightList .list table tr td input {
+        vertical-align: middle;
+        margin-right: 5px; }
+      .right .rightList .list table tr td img {
+        cursor: pointer; }
+      .right .rightList .list table tr td .imgs1 {
+        margin: 0px 5px; }
+      .right .rightList .list table tr td .imgs3 {
+        margin: 0px 5px; }
+    .right .rightList .divPig {
+      width: 100%;
+      height: 40px;
+      text-align: right;
+      line-height: 40px;
+      background: #f3f3f3; }
+      .right .rightList .divPig span {
+        font-size: 12px;
+        color: #333;
+        cursor: pointer; }
+      .right .rightList .divPig #iptPage {
+        width: 30px;
+        height: 20px;
+        border: 1px solid #ccc; }
+    .right .rightList .foot {
+      height: 40px;
+      width: 100%;
+      margin-top: 3px; }
+      .right .rightList .foot seclet {
+        width: 85px;
+        height: 20px; }
+      .right .rightList .foot input {
+        width: 60px;
+        height: 25px;
+        border: none;
+        background: #ff3f3f;
+        color: #fff;
+        margin-left: 10px;
+        border-radius: 5px; }
+    .right .rightList .footer {
+      width: 100%;
+      height: 60px;
+      background: #f3f3f3;
+      border: 1px solid #ccc;
+      text-align: center;
+      line-height: 60px;
+      font-size: 12px;
+      color: #666; }

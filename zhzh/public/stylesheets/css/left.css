@@ -1,0 +1,70 @@
+* {
+  margin: 0px;
+  padding: 0px; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+.left {
+  float: left;
+  height: 600px;
+  width: 180px;
+  background: #303030;
+  overflow-y: auto; }
+  .left dl {
+    width: 180px; }
+    .left dl dt {
+      width: 100%;
+      height: 34px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 34px;
+      text-align: center; }
+    .left dl dd {
+      width: 100%;
+      border-top: 1px solid #7f7f7f;
+      background: #575757; }
+      .left dl dd p {
+        width: 100%;
+        height: 43px;
+        position: relative; }
+        .left dl dd p img {
+          margin-left: 10px; }
+        .left dl dd p span {
+          color: #fff;
+          font-size: 13px;
+          display: block;
+          width: 118px;
+          height: 43px;
+          line-height: 43px;
+          padding-left: 45px;
+          position: absolute;
+          left: 0px;
+          top: 0px; }
+      .left dl dd p:hover {
+        cursor: pointer;
+        background: #454545; }
+      .left dl dd ol {
+        width: 100%;
+        color: #575757; }
+        .left dl dd ol li {
+          width: 100%;
+          height: 30px;
+          font-size: 12px;
+          color: #999;
+          line-height: 30px;
+          padding-left: 45px; }
+        .left dl dd ol li a {
+          color: #999; }
+        .left dl dd ol li:hover {
+          background: #7f7f7f;
+          color: #fff; }
+        .left dl dd ol li:hover a {
+          background: #7f7f7f;
+          color: #fff; }
+      .left dl dd .olo {
+        display: none; }
