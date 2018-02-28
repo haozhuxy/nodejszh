@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="../stylesheets/css/tianjia.css">
+
+</head>
+<body>
+
+
+<div class="right">
+	<div class="rightList">
+	
+	<!--头部 -->
+   
+		<div class="header">
+			<span>
+				<a>ECSHOP 管理中心</a>-商品列表
+			</span>
+			<img src="../stylesheets/img/jnsy.png">
+			<a href="/html/right.html" target="right">
+				<input type="button" value="+ 添加新商品" class="btn" onclick="addgood()">
+			</a>
+		</div>
+						
+	<!--中间部分 -->			
+		<div class="aside">
+		  	
+			<ul>
+				<li class="list">通用信息</li>
+				<li>详细描述</li>
+				<li>其他信息</li>
+				<li>商品属性</li>
+				<li>商品相册</li>
+				<li>关联商品</li>
+				<li>配件</li>
+				<li>关联文章</li>
+			</ul>
+		 
+		 <div class="asd">
+			
+			
+			
+			<div class="divo" id="odivo">
+				<div class="midDiv">
+					<table>
+						<tr>
+							
+							<td>
+								<span>商品名称:</span>
+							</td>
+							<td>
+								<input type="text" id="goodName">
+								<span>*</span>
+							</td>
+						</tr>
+						<tr>
+
+							<td>
+								<img src="../stylesheets/img/wen.jpg">
+								<span>商品货号:</span>
+							</td>
+							<td>
+								<input type="text" id="goodNumber">
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<span>
+									如果您不输入商品货号，系统将自动生成一个唯一的货号。
+								</span>
+							</td>
+						</tr>
+						<tr>
+
+							<td>
+								<span>商品价格:</span>
+							</td>
+							<td>
+								<input type="text" id="goodPrice">
+								<span>*</span>
+							</td>
+						</tr>
+						<tr>
+
+							<td>
+								<span>商品编号:</span>
+							</td>
+							<td>
+								<input type="text" id="goodBianhao">
+							</td>
+						</tr>
+						<tr>
+
+							<td>
+								<span>上下架:</span>
+							</td>
+							<td>
+								<select id="goodUp">
+									<option>0</option>
+									<option>1</option>
+								</select>
+								
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<span>
+									0表示上架，1表示下架。
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span>本店库存:</span>
+							</td>
+							<td>
+								<input type="text" id="goodStock">
+								
+								<span>*</span>
+							</td>
+						</tr>
+						<tr>
+
+							<td>
+								<img src="../stylesheets/img/wen.jpg">
+								<span>会员价格:</span>
+							</td>
+							<td>
+								<span>注册用户</span>
+								<input type="text" value="-1">
+								<span>代销用户</span>
+								<input type="text" value="-1">
+								<span>vip</span>
+								<input type="text" value="-1">
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<span>
+									会员价格为-1时表示会员价格按会员等级折扣率计算。
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="../stylesheets/img/wen.jpg">
+								<span>商品优惠价格:</span>
+							</td>
+							<td>
+								<span>[+]优惠数量</span>
+								<input type="text" value="-1">
+								<span>优惠价格</span>
+								<input type="text" value="-1">
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<span>
+									购买数量达到优惠数量时享受优惠价格。
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span>市场售价:</span>
+							</td>
+							<td>
+								<input type="text" value="0">
+								<input type="button" value="取整数">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span>虚拟销量:</span>
+							</td>
+							<td>
+								<input type="text" value="0">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="../stylesheets/img/wen.jpg">
+								<span>赠送消费积分数:</span>
+							</td>
+							<td>
+								<input type="text" value="-1">
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<span>
+									购买该商品时赠送消费积分数，-1表示按商品价格赠送。
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="../stylesheets/img/wen.jpg">
+								<span>赠送等级积分数:</span>
+							</td>
+							<td>
+								<input type="text" value="-1">
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<span>
+									购买该商品时赠送等级积分数，-1表示按商品价格赠送。
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="../stylesheets/img/wen.jpg">
+								<span>积分购买金额:</span>
+							</td>
+							<td>
+								<input type="text" value="0">
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<span>
+									(此处需填写金额)购买该商品时最多可以使用积分的金额。
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox">
+								<span>促销价:</span>
+							</td>
+							<td>
+								<input type="text" value="0">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span>促销日期:</span>
+							</td>
+							<td>
+								<input type="text" value="2018-01-17">
+								<input type="button" value="选择">
+								-
+								<input type="text" value="2018-02-17">
+								<input type="button" value="选择">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span>上传商品图片:</span>
+							</td>
+							<td>
+								<div>
+									<div class="top">
+										<input type="button" value="选择文件">
+										<span>未选择任何文件</span>
+										<img src="../stylesheets/img/no.gif">
+									</div>
+									<div class="und">
+										<input type="text" value="商品图片外部URL">
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span>上传商品缩略图:</span>
+							</td>
+							<td>
+								<div>
+									<div class="top1">
+										<input type="button" value="选择文件">
+										<span>未选择任何文件</span>
+										<img src="../stylesheets/img/no.gif">
+									</div>
+									<div class="und1">
+										<input type="text" value="商品缩略图外部URL">
+									</div>
+								</div>
+							</td>
+						</tr>
+						
+						<tr>
+							<td></td>
+							<td>								
+								<input type="checkbox">
+								<span>自动生成商品缩略图</span>								
+							</td>
+						</tr>
+						
+						<tr>
+							<td></td>
+							<td>								
+								<input type="button" value="确定" class="yes">
+								<input type="button" value="重置" class="rep">							
+							</td>
+						</tr>
+						
+					</table>
+				</div>
+				<div class="footer">
+					共执行7个查询
+				</div>		
+			</div>
+			
+			<div class="divo" id="divo1">
+				<div class="divCon">
+					
+				</div>
+				<div class="divFot">
+					<input type="button" value="确定" class="yes1">
+					<input type="button" value="重置" class="rep1">	
+				</div>
+			</div>
+			
+			<div class="divo" id="divo2">
+				<div class="divTab">
+					<table>
+						<tr>							
+							<td>
+								<span>商品名称:</span>
+							</td>
+							<td>
+								<input type="text">
+								<span>*</span>
+							</td>
+						</tr>
+						<tr>
+
+							<td>
+								<img src="../stylesheets/img/wen.jpg">
+								<span>商品货号:</span>
+							</td>
+							<td>
+								<input type="text">
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<span>
+									如果您不输入商品货号，系统将自动生成一个唯一的货号。
+								</span>
+							</td>
+						</tr>
+						<tr>
+
+							<td>
+								<span>商品分类:</span>
+							</td>
+							<td>
+								<select>
+									<option>请选择...</option>
+								</select>
+								<input type="button" value="添加分类">
+								<span>*</span>
+							</td>
+						</tr>
+						<tr>
+
+							<td>
+								<span>扩展分类:</span>
+							</td>
+							<td>
+								<input type="button" value="添加">
+							</td>
+						</tr>
+						<tr>
+
+							<td>
+								<span>商品品牌:</span>
+							</td>
+							<td>
+								<select>
+									<option>请选择...</option>
+								</select>
+								<input type="button" value="添加品牌">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span>本店售价:</span>
+							</td>
+							<td>
+								<input type="text" value="0">
+								<input type="button" value="按市场价计算">
+								<span>*</span>
+							</td>
+						</tr>
+						<tr>
+
+							<td>
+								<img src="../stylesheets/img/wen.jpg">
+								<span>会员价格:</span>
+							</td>
+							<td>
+								<span>注册用户</span>
+								<input type="text" value="-1">
+								<span>代销用户</span>
+								<input type="text" value="-1">
+								<span>vip</span>
+								<input type="text" value="-1">
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<span>
+									会员价格为-1时表示会员价格按会员等级折扣率计算。
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="../stylesheets/img/wen.jpg">
+								<span>商品优惠价格:</span>
+							</td>
+							<td>
+								<span>[+]优惠数量</span>
+								<input type="text" value="-1">
+								<span>优惠价格</span>
+								<input type="text" value="-1">
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<span>
+									购买数量达到优惠数量时享受优惠价格。
+								</span>
+							</td>
+						</tr>
+						
+						
+						<tr>
+							<td></td>
+							<td>								
+								<input type="checkbox">
+								<span>自动生成商品缩略图</span>								
+							</td>
+						</tr>
+						
+						<tr>
+							<td></td>
+							<td>								
+								<input type="button" value="确定" class="yes">
+								<input type="button" value="重置" class="rep">							
+							</td>
+						</tr>
+						
+					</table>
+				</div>
+			</div>
+			
+			<div class="divo" id="divo3">
+				<div class="divTab3">
+					<table>
+						
+						<tr>
+							<td>
+								<span>商品类型:</span>
+							</td>
+							<td>
+								<div>
+									<div class="top1">
+										<input type="button" value="选择类型">
+										<span>请选择商品类型</span>
+										<img src="../stylesheets/img/no.gif">
+									</div>
+									<div class="und1">
+										<input type="text" value="请选择商品类型">
+									</div>
+								</div>
+							</td>
+						</tr>
+						
+						<tr>
+							<td></td>
+							<td>								
+								<input type="checkbox">
+								<span>请选择商品类型</span>								
+							</td>
+						</tr>
+						
+						<tr>
+							<td></td>
+							<td>								
+								<input type="button" value="确定" class="yes">
+								<input type="button" value="重置" class="rep">							
+							</td>
+						</tr>
+						
+					</table>
+				</div>		
+			</div>
+			<div class="divo"><h1>aaaaa</h1></div>
+			<div class="divo"><h1>bbbbb</h1></div>
+			<div class="divo"><h1>ccccc</h1></div>
+			<div class="divo"><h1>ddddd</h1></div>
+			
+			
+		  </div>	
+				
+			
+		</div>	
+				
+		
+	</div>
+</div>
+
+	
+
+	
+</body>
+</html>
+<script>
+	function addgood(){
+		if($("#goodName").val() == "" || $("#goodPrice").val() == ""){
+			
+		}else{
+		
+			var form = new FormData(); // FormData是H5新特性
+			form.append("goodBianhao", document.getElementById("goodBianhao").value);
+			form.append("goodName", document.getElementById("goodName").value);
+			form.append("goodNumber", document.getElementById("goodNumber").value);
+			form.append("goodPrice", document.getElementById("goodPrice").value);
+			form.append("goodUp", document.getElementById("goodUp").value);
+			form.append("goodStock", document.getElementById("goodStock").value);
+	
+			var xhr = new XMLHttpRequest();
+			xhr.open("POST", "/api/goodload");
+			xhr.onreadystatechange = function(res){
+				console.log(res);
+				if (xhr.readyState==4 && xhr.status==200) {
+					console.log(xhr.responseText);
+					var res = JSON.parse(xhr.responseText);
+					alert(res.message);
+				}
+			}
+			xhr.send(form);
+		}
+	}
+	
+</script>
+
+
+
+
+
+
+<script type="text/javascript" src="../js/jquery-1.11.3.js"></script> 
+
+<script type="text/javascript" src="../js/tianjia.js"></script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1><%= title %></h1>
+		用户名:<input type="text" id="userName"><br>
+		密码:<input type="password" id="psw"><br>		
+		<button onclick="reg()">注册</button>
+	</body>
+	<script>
+		function reg(){
+			$.ajax({
+				url : "/api/reg5ajax",
+				type : "post",
+				data : {
+					userName : $("#userName").val(),
+					psw : $("#psw").val(),
+				},
+				success : function(res){
+					console.log(res);
+					if(res.code==1){
+						location.href = "/load?r=" + new Date().getTime();
+					}else{
+						alert(res.message);
+					}
+				}
+			})
+		}
+	</script>
+	
+	
+</html>
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script> 

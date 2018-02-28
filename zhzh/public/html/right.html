@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="../stylesheets/css/right.css">
+<link rel="stylesheet" href="../stylesheets/iconfont/iconfont.css">
+</head>
+<body>
+
+
+	
+	<div class="right">
+		<div class="rightList">
+			<div class="header">
+				<span>
+					<a>ECSHOP 管理中心</a>-商品列表
+				</span>
+				<img src="../stylesheets/img/jnsy.png">
+				<a href="/html/tianjia.html" target="right">
+					<input type="button" value="+ 添加新商品" class="btn">
+				</a>
+				<a href="/html/right.html" target="right" id="aa"></a>
+				
+			</div>
+			<div class="aside">
+				<i class="iconfont">&#xe686;</i>
+				<select class="select1">
+					<option>所有分类</option>
+				</select>
+				<select class="select2">
+					<option>所有品牌</option>
+				</select>
+				<select class="select3">
+					<option>全部</option>
+				</select>
+				<select class="select4">
+					<option>全部</option>
+				</select>
+				<span>关键字</span>
+				<input type="text" class="iptTxt">
+				<input type="button" value="搜索"  class="iptBtn">
+			</div>
+
+			
+			<div class="list"></div>
+			<div class="divPig">
+				<span>总计</span>
+				<span class="spoa"></span>
+				<span>条记录分为</span>
+				<span class="spob"></span>
+				<span>页当前第</span>
+				<span class="spoc"></span>
+				<span>页，每页</span>
+				<input type="text" value= "10" id="iptPage">
+				<span>第一页</span>
+				<span>上一页</span>
+				<span>下一页</span>
+				<span>最末页</span>
+				<select class="sel">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+				</select>
+			</div>
+			
+			<div class="foot">
+				<select>
+					<option>请选择...</option>
+					<input type="button" value="确定">
+				</select>
+			</div>
+		
+			<div class="footer">
+				共执行7个查询
+			</div>
+		</div>
+	</div>
+
+	
+</body>
+</html>
+<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="../js/shang.js"></script>
+<script>
+
+
+
+
+$(function(){
+	ajax();
+
+	function creat(res){				
+					
+		var table = $("<table width='100%' border='1' style='border-collapse:collapse;' borderColor='#ccc'></table>");
+		$(".list").append(table);
+		var thead = $("<thead class='the'></thead>")
+		table.append(thead);
+		var tr = $("<tr></tr>");
+		thead.append(tr);
+		var td = $(
+					"<td width='10%'>" + '<input type="checkbox">' + '编号'  + "</td>"
+					+ "<td width='16%'>" + '商品名称'  + "</td>"
+					+ "<td width='12%'>" + '货号'  + "</td>"
+					+ "<td width='10%'>" + '价格'  + "</td>"
+					+ "<td width='4%'>" + '上架'  + "</td>"
+					+ "<td width='4%'>" + '精品'  + "</td>"
+					+ "<td width='4%'>" + '新品'  + "</td>"
+					+ "<td width='4%'>" + '热销'  + "</td>"
+					+ "<td width='8%'>" + '推荐排序'  + "</td>"
+					+ "<td width='4%'>" + '库存'  + "</td>"
+					+ "<td width='8%'>" + '虚拟销量'  + "</td>"
+					+ "<td width='14%'>" + '操作'  + "</td>"
+				
+				);
+				
+		td.css({
+			"height" : "40px",
+			"textAlign" : "center",
+			"fontSize" : "13px",
+			"background" : "#f3f3f3"
+		});
+		
+		tr.append(td);
+		
+		res.data.forEach(function(val,ind){
+			var img;
+
+			if(val.goodUp == "0"){
+				img = '<img src="../stylesheets/img/yes.gif">';
+			}
+			if(val.goodUp == "1"){
+				img = '<img src="../stylesheets/img/no.gif">';
+			}
+																	
+			var tr = $("<tr class='trs'></tr>");
+			tr.css({
+				"height":"50px",
+			})
+			table.append(tr);
+			var td = $("<td width='8%'>" + '<input type="checkbox">' + '<span class="bianhao">' + val.goodBianhao +  "</span></td>"
+					+ "<td width='12%'><span>" + val.goodName + "</span></td>"
+					+ "<td width='8%' class='tds'><span>" + val.goodNumber + "</span></td>"
+					+ "<td width='6%'><span>" + val.goodPrice + "</span></td>"
+					+ "<td width='3%' id='tds'><span>" + img + "</span></td>"								
+					+ "<td width='3%'><span>" + 100 + "</span></td>"
+					+ "<td width='3%'><span>" + 100 + "</span></td>"
+					+ "<td width='3%'><span>" + 100 + "</span></td>"
+					+ "<td width='5%'><span>" + 100 + "</span></td>"
+					+ "<td width='3%'><span>" + val.goodStock + "</span></td>"
+					+ "<td width='6%'><span>" + 0 + "</span></td>"
+					+ '<td width="10%"><img src="../stylesheets/img/view.gif" class="imgs1"><img src="../stylesheets/img/edit.gif" class="imgs2"><img src="../stylesheets/img/copy.gif" class="imgs3"><img src="../stylesheets/img/trash.gif" class="imgs4"></td>'
+					
+			);
+			td.css({
+				"color" : "#333",
+				"fontSize" : "12px",
+				"textAlign" : "center",
+				"font-weight" : "bold"
+			})
+
+			tr.append(td);			
+		})
+		
+	}			
+		
+//点击搜索按钮时  删除table 重新生成新的table
+	$(".iptBtn").click(function(){
+		$(".list>table").remove();
+		ajax();						
+	})
+
+//点击列表删除图标按钮时 删除当前所在的tr以及把数据库中与之相对的数据中的flag 变为1
+	$(".list").on("click",".imgs4" ,function(){
+		var sum = $(this).parent().siblings().children(".bianhao").html();
+		console.log(sum);
+		$(this).parents(".trs").remove();
+	
+		ajaxs(sum);
+		console.log($(this).parents(".list"));
+		$(this).parents(".list").children("table:eq(1)").remove();
+	})
+		
+
+	function ajax(sum){
+		$.ajax({
+			url : "/api/right",
+			type : "post",
+			data : {					
+				condition : $(".iptTxt").val(),
+				perPageCnt : $("#iptPage").val(),
+				pageNO    : $(".sel").children("option:checked").val(),
+				fag : sum	
+				},
+				success : function(res){
+					//总记录条数
+					$(".spoa").html(res.total);
+					//页数
+					var num = Math.ceil(res.total/10);
+					$(".spob").html(num);
+					//当前页
+					$(".spoc").html(res.pageNO);
+					
+					creat(res);	
+																			
+			}
+		})
+	}
+	
+	function ajaxs(sum){
+		$.ajax({
+			url : "/api/rights",
+			type : "post",
+			data : {					
+				condition : $(".iptTxt").val(),
+				perPageCnt : $("#iptPage").val(),
+				pageNO    : $(".sel").children("option:checked").val(),
+				fag : sum	
+				},
+				success : function(res){
+					//总记录条数
+					$(".spoa").html(res.total);
+					//页数
+					var num = Math.ceil(res.total/10);
+					$(".spob").html(num);
+					//当前页
+					$(".spoc").html(res.pageNO);					
+														
+			}
+		})
+	}
+
+
+})			
+
+			
+			
+	
+</script>
+
+
