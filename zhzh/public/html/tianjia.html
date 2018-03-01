@@ -52,6 +52,13 @@
 							</td>
 							<td>
 								<input type="text" id="goodName">
+								<select name="goods_name_style">
+									<option value="1">字体样式</option>
+									<option value="strong">加粗</option>
+									<option value="em">斜体</option>
+									<option value="u">下划线</option>
+									<option value="strike">删除</option>
+								</select>
 								<span>*</span>
 							</td>
 						</tr>
@@ -248,10 +255,10 @@
 								<span>促销日期:</span>
 							</td>
 							<td>
-								<input type="text" value="2018-01-17">
+								<input type="text" value="2018-03-01">
 								<input type="button" value="选择">
 								-
-								<input type="text" value="2018-02-17">
+								<input type="text" value="2018-03-31">
 								<input type="button" value="选择">
 							</td>
 						</tr>
@@ -267,7 +274,7 @@
 										<img src="../stylesheets/img/no.gif">
 									</div>
 									<div class="und">
-										<input type="text" value="商品图片外部URL">
+										<input type="text" placeholder="商品图片外部URL">
 									</div>
 								</div>
 							</td>
@@ -284,7 +291,7 @@
 										<img src="../stylesheets/img/no.gif">
 									</div>
 									<div class="und1">
-										<input type="text" value="商品缩略图外部URL">
+										<input type="text" placeholder="商品缩略图外部URL">
 									</div>
 								</div>
 							</td>
@@ -309,7 +316,7 @@
 					</table>
 				</div>
 				<div class="footer">
-					共执行7个查询
+					共执行N个查询
 				</div>		
 			</div>
 			
@@ -503,10 +510,223 @@
 					</table>
 				</div>		
 			</div>
-			<div class="divo"><h1>aaaaa</h1></div>
-			<div class="divo"><h1>bbbbb</h1></div>
-			<div class="divo"><h1>ccccc</h1></div>
-			<div class="divo"><h1>ddddd</h1></div>
+			<div class="divo" id="divo4">
+				<div class="divTab4">
+					<table>
+						<tr>
+							<td>
+								<a href="javascript:;">[+]</a>
+								图片描述
+								<input type="text" size="20"/>
+								上传文件
+								<input type="button" value="选择文件"/>
+								未选择任何文件
+								<input type="text" size="40" id="i40"/>
+							</td>
+						</tr>
+						
+						
+						
+					</table>
+				</div>
+				<div class="button-div">
+							<input type="button" value="确定" class="button"/>
+							<input type="reset" value="重置" class="button">
+						</div>
+				
+			</div>
+			
+			<div class="divo" id="divo5">
+				<div class="divTab5">
+					<table>
+						<tr>
+							<td colspan="3">
+								<select name="cat_id1" id="cat_id1">
+									<option value="0">所有分类</option>
+									<option value="123">钻石</option>
+								</select>
+								<select id="brand_id1">
+									<option value="66">所有品牌</option>
+									<option value="13">gr</option>
+								</select>
+								<input type="text" />
+								<input type="button" value="搜索" class="button" />
+							</td>
+						</tr>
+						
+						<tr>
+							<th>可选商品</th>
+							<th>操作</th>
+							<th>跟该商品关联的商品</th>
+						</tr>
+						
+						<tr>
+							<td width="42%">
+								<select name="source_select1" size="20" 
+									style="width:100%"
+									multiple="true"></select>
+							</td>
+							<td align="center">
+								<p>
+									<input type="radio" name="is_single" 
+										value="1" checked="checked"/>
+										单向关联
+										<br />
+									<input type="radio" name="is_single" 
+										value="0"/>	
+										双向关联 
+								</p>
+								<p>
+									<input type="button" value=">>" class="button"/>
+								</p>
+								<p>
+									<input type="button" value=">" class="button"/>
+								</p>
+								<p>
+									<input type="button" value="<" class="button"/>
+								</p>
+								<p>
+									<input type="button" value="<<" class="button"/>
+								</p>
+								
+							</td>
+							<td width="42%">
+								<select name="source_select1" size="20" 
+									style="width:100%"
+									></select>
+							</td>
+						</tr>
+					</table>
+				</div>
+				
+				<div class="button-div">
+							<input type="button" value="确定" class="button"/>
+							<input type="reset" value="重置" class="button">
+						</div>
+						
+				
+			</div>
+			<div class="divo" id="divo6">
+				<div class="divTab6">
+					<table>
+						<tr>
+							<td colspan="3">
+								<select name="cat_id2" id="cat_id2">
+									<option value="0">所有分类</option>
+									<option value="123">钻石</option>
+								</select>
+								<select id="brand_id2">
+									<option value="66">所有品牌</option>
+									<option value="13">gr</option>
+								</select>
+								<input type="text" />
+								<input type="button" value="搜索" class="button" />
+							</td>
+						</tr>
+						
+						<tr>
+							<th>可选商品</th>
+							<th>操作</th>
+							<th>该商品的配件</th>
+						</tr>
+						
+						<tr>
+							<td width="42%">
+								<select name="source_select1" size="20" 
+									style="width:100%"
+									multiple="true"></select>
+							</td>
+							<td align="center">
+								
+								<p>
+									价格
+									<br />
+									<input type="text" size="6"/>
+								</p>
+								<p>
+									<input type="button" value=">" class="button"/>
+								</p>
+								<p>
+									<input type="button" value="<" class="button"/>
+								</p>
+								<p>
+									<input type="button" value="<<" class="button"/>
+								</p>
+								
+							</td>
+							<td width="42%">
+								<select name="source_select1" size="20" 
+									style="width:100%"
+									></select>
+							</td>
+						</tr>
+					</table>
+					
+				</div>
+				
+				<div class="button-div">
+							<input type="button" value="确定" class="button"/>
+							<input type="reset" value="重置" class="button">
+						</div>
+				
+			</div>
+			
+			<div class="divo" id="divo7">
+				<div class="divTab7">
+					<table>
+						<tr>
+							<td colspan="3">
+								
+								文章标题
+								<input type="text" />
+								<input type="button" value="搜索" class="button" />
+							</td>
+						</tr>
+						
+						<tr>
+							<th>可选文章</th>
+							<th>操作</th>
+							<th>跟该商品关联的文章</th>
+						</tr>
+						
+						<tr>
+							<td width="45%">
+								<select name="source_select1" size="20" 
+									style="width:100%"
+									multiple="true"></select>
+							</td>
+							<td align="center">
+								
+								<p>
+									<input type="button" value=">>" class="button"/>
+								</p>
+								<p>
+									<input type="button" value=">" class="button"/>
+								</p>
+								<p>
+									<input type="button" value="<" class="button"/>
+								</p>
+								<p>
+									<input type="button" value="<<" class="button"/>
+								</p>
+								
+							</td>
+							<td width="45%">
+								<select name="source_select1" size="20" 
+									style="width:100%"
+									></select>
+							</td>
+						</tr>
+					</table>
+					
+				</div>
+				
+				<div class="button-div">
+							<input type="button" value="确定" class="button"/>
+							<input type="reset" value="重置" class="button">
+						</div>
+				
+			</div>
 			
 			
 		  </div>	
@@ -518,18 +738,21 @@
 	</div>
 </div>
 
+
 	
 
 	
 </body>
 </html>
+<script type="text/javascript" src="../js/jquery-1.11.3.js"></script> 
+<script type="text/javascript" src="../js/tianjia.js"></script>
 <script>
 	function addgood(){
 		if($("#goodName").val() == "" || $("#goodPrice").val() == ""){
 			
 		}else{
 		
-			var form = new FormData(); // FormData是H5新特性
+			var form = new FormData(); 
 			form.append("goodBianhao", document.getElementById("goodBianhao").value);
 			form.append("goodName", document.getElementById("goodName").value);
 			form.append("goodNumber", document.getElementById("goodNumber").value);
@@ -558,6 +781,3 @@
 
 
 
-<script type="text/javascript" src="../js/jquery-1.11.3.js"></script> 
-
-<script type="text/javascript" src="../js/tianjia.js"></script>

@@ -7,6 +7,24 @@ li {
 
 a {
   text-decoration: none; }
+p,td,div,input,select,option,th{font-size: 12px;
+font-family: "微软雅黑";}  
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+color: #aaa;
+font-size: 12px; 
+} 
+input:-moz-placeholder, textarea:-moz-placeholder { 
+color: #aaa; 
+font-size: 12px;
+} 
+input::-moz-placeholder, textarea::-moz-placeholder { 
+color: #aaa; 
+font-size: 12px;
+} 
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
+color: #aaa;
+font-size: 12px; 
+}
 
 .right {
   float: left;
@@ -70,7 +88,11 @@ a {
           color: #787878;
           cursor: pointer; }
         .right .rightList .aside ul .list {
-          background: #fefefe; }
+          background: #fefefe; 
+          font-size: 12px;
+          font-weight: bold;
+          color:black;
+          }
       .right .rightList .aside .asd {
         width: 100%;
         position: relative; }
@@ -104,7 +126,7 @@ a {
             .right .rightList .aside .asd #odivo .midDiv table tr:nth-child(1) td:nth-child(2) input {
               width: 190px;
               margin-left: 10px;
-              border: 1px solid #f0f; }
+              border: 1px solid #a9a9a9; }
             .right .rightList .aside .asd #odivo .midDiv table tr:nth-child(1) td:nth-child(2) span {
               color: red;
               margin-left: 20px; }
@@ -116,7 +138,7 @@ a {
             .right .rightList .aside .asd #odivo .midDiv table tr:nth-child(2) td:nth-child(2) input {
               width: 132px;
               margin-left: 10px;
-              border: 1px solid #f0f; }
+              border: 1px solid #A9A9A9; }
             .right .rightList .aside .asd #odivo .midDiv table tr:nth-child(3) {
               line-height: 14px; }
               .right .rightList .aside .asd #odivo .midDiv table tr:nth-child(3) td:nth-child(2) span {
@@ -129,7 +151,7 @@ a {
             .right .rightList .aside .asd #odivo .midDiv table tr:nth-child(4) td:nth-child(2) input {
               width: 132px;
               margin-left: 10px;
-              border: 1px solid #f0f; }
+              border: 1px solid #a9a9a9; }
             .right .rightList .aside .asd #odivo .midDiv table tr:nth-child(4) td:nth-child(2) span {
               color: red;
               margin-left: 20px; }
@@ -139,14 +161,14 @@ a {
             .right .rightList .aside .asd #odivo .midDiv table tr:nth-child(5) td:nth-child(2) input {
               width: 132px;
               margin-left: 10px;
-              border: 1px solid #f0f; }
+              border: 1px solid #a9a9a9; }
             .right .rightList .aside .asd #odivo .midDiv table tr:nth-child(6) td:nth-child(1) span {
               font-size: 12px;
               color: #333; }
             .right .rightList .aside .asd #odivo .midDiv table tr:nth-child(6) td:nth-child(2) select {
               width: 107px;
               margin-left: 10px;
-              border: 1px solid #f0f; }
+              border: 1px solid #a9a9a9; }
             .right .rightList .aside .asd #odivo .midDiv table tr:nth-child(7) {
               line-height: 14px; }
               .right .rightList .aside .asd #odivo .midDiv table tr:nth-child(7) td:nth-child(2) span {
@@ -159,7 +181,7 @@ a {
             .right .rightList .aside .asd #odivo .midDiv table tr:nth-child(8) td:nth-child(2) input {
               width: 133px;
               margin-left: 10px;
-              border: 1px solid #f0f; }
+              border: 1px solid #a9a9a9; }
             .right .rightList .aside .asd #odivo .midDiv table tr:nth-child(8) td:nth-child(2) span {
               color: red;
               margin-left: 20px; }
@@ -600,3 +622,45 @@ a {
                 cursor: pointer; }
               .right .rightList .aside .asd #divo3 .divTab3 table tr:nth-child(3) td:nth-child(2) .yes {
                 margin-left: 120px; }
+                
+                #divo4{background: #fff;}
+                .divTab4 a{font-size: 12px;}
+                .divTab4 a:link{color:#335B64;}
+                .divTab4 a:hover{color:#eb8a3d;
+                text-decoration: underline;}
+                .divTab4 table{width:90%;
+                -webkit-margin-start: auto;
+                -webkit-margin-end: auto;}
+                table{
+                	border-collapse: separate;
+                	border-spacing: 2px;
+                	border-color: grey;
+                }
+                .divTab4 #i40{margin-left: 50px;}
+                .button-div{text-align: center;
+                padding:3px 0;}
+                input.button{
+                	padding: 5px 15px 5px;
+                	margin:2px 2px;
+                	border:none;
+                	background: #FF3F3F;
+                	color:#fff;
+                	cursor: pointer;
+                	border-radius: 3px;
+                }
+                #divo5,#divo6,#divo7{background: #fff;}
+                
+                .divTab3 table,.divTab4 table,.divTab5 table,.divTab6 table,.divTab7 table
+                {margin-top:10px;
+                width:90%;
+                -webkit-margin-start: auto;
+                -webkit-margin-end: auto;
+                }
+                
+                #cat_id1,#cat_id2{width:156px;}
+                #brand_id1,#brand_id2{width:105px;}
+                th{font-style: normal;
+                font-weight: normal;}
+                .divTab5 .button,.divTab6 .button,.divTab7 .button{margin:8px 0;}
+                
+                

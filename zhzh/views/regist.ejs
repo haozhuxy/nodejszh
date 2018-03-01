@@ -5,7 +5,7 @@
 		<title></title>
 	</head>
 	<body>
-		<h1><%= title %></h1>
+		<h1>注册页面</h1>
 		用户名:<input type="text" id="userName"><br>
 		密码:<input type="password" id="psw"><br>		
 		<button onclick="reg()">注册</button>
@@ -22,7 +22,7 @@
 				success : function(res){
 					console.log(res);
 					if(res.code==1){
-						location.href = "/load?r=" + new Date().getTime();
+						location.href = "/login?r=" + new Date().getTime();
 					}else{
 						alert(res.message);
 					}

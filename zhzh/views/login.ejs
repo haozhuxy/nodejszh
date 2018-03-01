@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title></title>
-<link rel="stylesheet" type="text/css" href="stylesheets/css/load.css">
+<link rel="stylesheet" type="text/css" href="stylesheets/css/login.css">
 <link rel="stylesheet" href="stylesheets/iconfont/iconfont.css">
 </head>
 <body>
@@ -15,10 +15,12 @@
 		<div class="loading">
 			<div class="divLoad">
 				<div class="divName">	
-					<input type="text" placeholder="用户名" class="iptName" style="padding-left:50px;">
+					<input type="text" placeholder="用户名" class="iptName" 
+						id="userName" style="padding-left:50px;">
 				</div>
 				<div class="divPassword">
-					<input type="text" placeholder="密码" class="iptPassword" style="padding-left:50px;">
+					<input type="password" placeholder="密码" class="iptPassword" 
+						id="psw" style="padding-left:50px;">
 				</div>
 				<div class="divVer">
 					<input type="text" placeholder="验证码" class="iptVer" style="padding-left:50px;">
@@ -46,8 +48,8 @@
 				url : "/api/load5ajax",
 				type : "post",
 				data : {
-					userName : $(".iptName").val(),
-					psw : $(".iptPassword").val(),
+					userName : $("#userName").val(),
+					psw : $("#psw").val(),
 					
 				},
 				success : function(res){

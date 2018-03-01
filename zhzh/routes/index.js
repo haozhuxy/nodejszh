@@ -7,21 +7,22 @@ var multiparty = require("multiparty");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
-
-
-//登录页面
-router.get('/load', function(req, res, next) {
-  res.render('load', { title: 'load' });
+  res.render('regist', { title: '注册' });
 });
 
 //注册页面
-router.get('/reg', function(req, res, next) {
-  res.render('reg', { title: 'reg' });
+//router.get('/regist', function(req, res, next) {
+//res.render('regist', { title: 'regist' });
+//});
+
+//登录页面
+router.get('/login', function(req, res, next) {
+  res.render('login', { title: 'login' });
 });
 
-//管理页
+
+
+//管理
 router.get('/shangs', function(req, res, next) {
 	if(req.session == null || req.session.userName == null) {
 		res.redirect("/shangs");

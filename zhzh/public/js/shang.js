@@ -1,10 +1,10 @@
-$(".top>ul>li").hover(function(){
+$(".top>ul>li").mouseenter(function(){
 	$(this).css("backgroundColor","rgba(135,135,135,0.3)");
 },function(){
 	$(this).css("background","#303030");
 })
 
-$(".nav>ul>li").hover(function(){
+$(".nav>ul>li").mouseenter(function(){
 	$(this).css("backgroundColor","rgba(48,48,48,0.5)");
 	$(".spa").css("color","rgba(48,48,48,0.5)")
 },function(){
