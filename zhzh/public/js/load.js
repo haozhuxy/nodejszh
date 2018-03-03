@@ -14,7 +14,7 @@ $(function(){
 	}
 	
 	$(".ver").html(sum);
-//点击的时候变换验证码		
+//点击变换验证码		
 	$(".ver").click(function(){
 		var str = "";
 		for(var i=0; i<4;i++){
@@ -24,60 +24,7 @@ $(function(){
 		$(this).html(str);
 	})
 
-//登录验证
-	//用户名
-	/*$(".iptName").blur(function(){
-		if($(".iptName").val() == ""){
-			alert("请输入用户名");
-		}
-		else if($(".iptName").val()
-		.match(/^[a-zA-Z_]\w{5,14}$/)){			
-		
-		}else{
-			alert("用户名错误");
-		}
-	})
-	
-	//密码
-	$(".iptPassword").blur(function(){
-		if($(".iptPassword").val() == ""){
-			alert("请输入密码");
-		}
-		else if($(".iptPassword").val().match(/(\d[A-z]|[A-z]\d)/)){
-			
-		}else{
-			alert("密码错误");
-		}
-	})
-	
-	//验证码
-	$(".iptVer").blur(function(){
-		if($(".iptVer").val() == ""){
-			alert("请输入验证码");
-		}
-		else if($(".iptVer").val() == $(".ver").html()){
-			
-		}else{
-			alert("验证码错误");
-		}
-	})
-	*/
-	
-	//点击登录按钮
-	/*$(".btnLoad").click(function(){
-		if($(".iptName").val().match(/^[a-zA-Z_]\w{5,14}$/) &&
-		$(".iptName").val() != "" && $(".iptPassword").val().match(/(\d[A-z]|[A-z]\d)/) && $(".iptPassword").val() != "" && 
-		$(".iptVer").val() == $(".ver").html()){
 
-			//window.location = "shang.html";
-			$(".iptName").val(" ");
-			$(".iptPassword").val(" ");
-			$(".iptVer").val(" ");
-		}else{
-
-		}		
-		
-	})*/
 
 
 

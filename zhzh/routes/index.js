@@ -33,8 +33,8 @@ router.get('/shangs', function(req, res, next) {
 });
 
 
-router.get('/tianjia', function(req, res, next) {
-  res.render('tianjia', {});
+router.get('/add', function(req, res, next) {
+  res.render('add', {});
 });
 
 router.get('/right', function(req, res, next) {
